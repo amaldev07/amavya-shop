@@ -3,11 +3,12 @@ name: Deploy Angular App to Firebase Hosting
 on:
   push:
     branches:
-      - main  # deploy only when main branch changes
+      - main
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -24,7 +25,7 @@ jobs:
         run: npm run build --prefix frontend -- --configuration production
 
       - name: Deploy to Firebase Hosting
-        uses: w9jds/firebase-action@v13
+        uses: w9jds/firebase-action@v12.4.0   # ✅ fixed version
         with:
           args: deploy --only hosting
         env:
