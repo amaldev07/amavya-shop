@@ -1,54 +1,213 @@
-.coming-soon {
-  height: 100vh;
-  background: linear-gradient(145deg, #3b1d3f, #2b1530);
-  color: #f4e3b2;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #faf8f5;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background-color: #3b1d3f;
+  color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
 }
 
 .logo {
-  width: 150px;
-  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
 }
 
-.brand-name {
-  font-size: 3rem;
-  letter-spacing: 5px;
-  margin: 0;
-  color: #d4af37; // gold
+.logo img {
+  width: 45px;
+  height: 45px;
+}
+
+.logo h1 {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #f4c542;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #fff;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #3b1d3f;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: #666;
+  max-width: 600px;
+  margin: 0.5rem auto 2rem;
+}
+
+.btn {
+  background-color: #d4af37;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c09b30;
+}
+
+/* Category Section */
+.categories {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #faf8f5;
+}
+
+.categories h3 {
+  font-size: 1.5rem;
+  color: #3b1d3f;
+  margin-bottom: 1rem;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.category {
+  background-color: white;
+  border: 1px solid #d4af37;
+  border-radius: 25px;
+  padding: 0.6rem 1.4rem;
+  color: #3b1d3f;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category:hover,
+.category.active {
+  background-color: #d4af37;
+  color: white;
+}
+
+/* Product Section */
+.product-section {
+  padding: 3rem 1rem;
+  background-color: #fff;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #faf8f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  width: 230px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.product-card h4 {
+  font-size: 1rem;
+  color: #3b1d3f;
+  margin-bottom: 0.3rem;
+}
+
+.price {
+  color: #d4af37;
   font-weight: 600;
 }
 
-.tagline {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #f8e9c0;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #3b1d3f;
+  color: white;
+  font-size: 0.9rem;
 }
 
-.coming-text {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: #f4e3b2;
-}
+/* ✅ Responsive (Mobile First) */
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
 
-.sub-text {
-  font-size: 1rem;
-  color: #d8c28b;
+  .menu a {
+    margin: 0 0.8rem;
+  }
 
-  a {
-    color: #f8d878;
-    text-decoration: none;
-    font-weight: 500;
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+
+  .product-card {
+    width: 45%;
   }
 }
 
-.footer {
-  position: absolute;
-  bottom: 1.5rem;
-  font-size: 0.9rem;
-  color: #c4b07a;
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
+
+  .logo h1 {
+    font-size: 1.1rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
 }

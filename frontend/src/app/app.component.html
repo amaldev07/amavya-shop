@@ -1,15 +1,63 @@
-<div class="coming-soon">
-  <div class="logo-container">
-    <img src="assets/amavya-logo.png" alt="Amavya Logo" class="logo" />
+<header class="header">
+  <div class="logo">
+    <img src="assets/amavya-logo.png" alt="Amavya Logo" />
+    <h1>AMAVYA</h1>
   </div>
+  <nav class="menu">
+    <a href="#">Home</a>
+    <a href="#products">Shop</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
 
-  <h1 class="brand-name">AMAVYA</h1>
-  <p class="tagline">Adorn Your Aura</p>
-
-  <h2 class="coming-text">Our Anti-Tarnish Jewellery Collection is Coming Soon ✨</h2>
-  <p class="sub-text">Follow us on Instagram <a href="https://www.instagram.com/_amavya_/" target="_blank">&#64;amavya.jewels</a> for updates!</p>
-
-  <div class="footer">
-    <p>© {{ currentYear }} Amavya. All rights reserved.</p>
+<section class="hero">
+  <div class="hero-content">
+    <h2>Adorn Your Aura</h2>
+    <p>Premium Anti-Tarnish Jewellery, Crafted for Everyday Elegance.</p>
+    <a href="#products" class="btn">Explore Collection</a>
   </div>
-</div>
+</section>
+
+<section class="categories">
+  <h3>Shop by Category</h3>
+  <div class="category-list">
+    <button class="category active">All</button>
+    <button class="category">Necklaces</button>
+    <button class="category">Earrings</button>
+    <button class="category">Bracelets</button>
+    <button class="category">Bangles</button>
+  </div>
+</section>
+
+<section id="products" class="product-section">
+  <div class="product-container">
+    <div class="product-card" data-category="Necklaces">
+      <img src="assets/product1.jpg" alt="Necklace" />
+      <h4>Gold Bloom Necklace</h4>
+      <p class="price">₹1,299</p>
+    </div>
+
+    <div class="product-card" data-category="Earrings">
+      <img src="assets/product2.jpg" alt="Earrings" />
+      <h4>Royal Pearl Earrings</h4>
+      <p class="price">₹899</p>
+    </div>
+
+    <div class="product-card" data-category="Bracelets">
+      <img src="assets/product3.jpg" alt="Bracelet" />
+      <h4>Radiant Lotus Bracelet</h4>
+      <p class="price">₹1,499</p>
+    </div>
+
+    <div class="product-card" data-category="Bangles">
+      <img src="assets/product4.jpg" alt="Bangles" />
+      <h4>Graceful Gold Bangles</h4>
+      <p class="price">₹1,599</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Amavya. All rights reserved.</p>
+</footer>
