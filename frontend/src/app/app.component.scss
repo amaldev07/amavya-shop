@@ -1,0 +1,54 @@
+.coming-soon {
+  height: 100vh;
+  background: linear-gradient(145deg, #3b1d3f, #2b1530);
+  color: #f4e3b2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 1.5rem;
+}
+
+.brand-name {
+  font-size: 3rem;
+  letter-spacing: 5px;
+  margin: 0;
+  color: #d4af37; // gold
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #f8e9c0;
+}
+
+.coming-text {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #f4e3b2;
+}
+
+.sub-text {
+  font-size: 1rem;
+  color: #d8c28b;
+
+  a {
+    color: #f8d878;
+    text-decoration: none;
+    font-weight: 500;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #c4b07a;
+}
