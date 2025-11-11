@@ -210,3 +210,59 @@ footer {
     padding: 3rem 1rem;
   }
 }
+
+/* card actions: begin */
+/* Buttons inside product cards */
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.btn {
+  flex: 1;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Add to Cart button */
+.add-cart {
+  background-color: #d4af37;
+  color: #fff;
+}
+
+.add-cart:hover {
+  background-color: #c09b30;
+  transform: translateY(-2px);
+}
+
+/* Buy Now button */
+.buy-now {
+  background-color: transparent;
+  color: #3b1d3f;
+  border: 1px solid #d4af37;
+}
+
+.buy-now:hover {
+  background-color: #d4af37;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Mobile layout for buttons */
+@media (max-width: 480px) {
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* card actions: end */
