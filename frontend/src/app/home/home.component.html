@@ -34,7 +34,7 @@
   <div class="product-container">
     <div class="product-card" *ngFor="let product of products" [attr.data-category]="product.category"
       [routerLink]="['/product', product.id]">
-      <img [src]="product.image" [alt]="product.name" />
+      <img [src]="product.thumbnail" [alt]="product.name" />
       <h4>{{ product.name }}</h4>
       <p class="price">₹{{ product.price }}</p>
 

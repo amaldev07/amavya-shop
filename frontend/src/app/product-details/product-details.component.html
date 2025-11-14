@@ -1,13 +1,13 @@
 <div class="product-details" *ngIf="product">
   <!-- Left: Product Images -->
   <div class="product-gallery">
-    <img [src]="product.image" alt="Main Product" class="main-image" />
+    <img [src]="product.images[0]" alt="Main Product" class="main-image" />
 
     <div class="thumbnail-row">
-      <img [src]="product.image" alt="Thumbnail 1" />
-      <img [src]="product.image" alt="Thumbnail 2" />
-      <img [src]="product.image" alt="Thumbnail 3" />
-      <img [src]="product.image" alt="Thumbnail 4" />
+      <img [src]="product.images[0]" alt="Thumbnail 1" />
+      <img [src]="product.images[1]" alt="Thumbnail 2" />
+      <img [src]="product.images[2]" alt="Thumbnail 3" />
+      <img [src]="product.images[3]" alt="Thumbnail 4" />
     </div>
   </div>
 

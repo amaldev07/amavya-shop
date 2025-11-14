@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Graceful Gold Bangles",
+    "price": 1599,
+    "image": "assets/product2.jpg",
+    "category": "Bangles"
+  },
+  {
+    "id": 2,
+    "name": "Royal Pearl Earrings",
+    "price": 899,
+    "image": "assets/product2.jpg",
+    "category": "Earrings"
+  },
+  {
+    "id": 3,
+    "name": "Radiant Lotus Bracelet",
+    "price": 1499,
+    "image": "assets/product2.jpg",
+    "category": "Bracelets"
+  },
+  {
+    "id": 4,
+    "name": "Gold Bloom Necklace",
+    "price": 1299,
+    "image": "assets/product2.jpg",
+    "category": "Necklaces"
+  },
+  {
+    "id": 5,
+    "name": "Graceful Gold Bangles",
+    "price": 1599,
+    "image": "assets/product2.jpg",
+    "category": "Bangles"
+  },
+  {
+    "id": 6,
+    "name": "Graceful Gold Bangles",
+    "price": 1599,
+    "image": "assets/product2.jpg",
+    "category": "Bangles"
+  }
+]
