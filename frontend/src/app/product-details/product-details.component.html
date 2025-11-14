@@ -1,20 +1,20 @@
-<div class="product-details">
+<div class="product-details" *ngIf="product">
   <!-- Left: Product Images -->
   <div class="product-gallery">
-    <img src="assets/product2.jpg" alt="Main Product" class="main-image" />
+    <img [src]="product.image" alt="Main Product" class="main-image" />
 
     <div class="thumbnail-row">
-      <img src="assets/product1.png" alt="Thumbnail 1" />
-      <img src="assets/product2.jpg" alt="Thumbnail 2" />
-      <img src="assets/product3.png" alt="Thumbnail 3" />
-      <img src="assets/product4.png" alt="Thumbnail 4" />
+      <img [src]="product.image" alt="Thumbnail 1" />
+      <img [src]="product.image" alt="Thumbnail 2" />
+      <img [src]="product.image" alt="Thumbnail 3" />
+      <img [src]="product.image" alt="Thumbnail 4" />
     </div>
   </div>
 
   <!-- Right: Product Info -->
   <div class="product-info">
-    <h2>Gold Bloom Necklace</h2>
-    <p class="price">₹1,299</p>
+    <h2>{{ product.name }}</h2>
+    <p class="price">₹{{ product.price }}</p>
 
     <div class="quantity">
       <label for="qty">Quantity:</label>
@@ -40,4 +40,10 @@
       </p>
     </div>
   </div>
+</div>
+
+
+<!-- If product is not found -->
+<div *ngIf="!product">
+  <p>Product not found.</p>
 </div>

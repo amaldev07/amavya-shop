@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Product } from '../models/product.model';
+import { ActivatedRoute } from '@angular/router';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-product-details',
@@ -6,5 +9,22 @@ import { Component } from '@angular/core';
   styleUrl: './product-details.component.scss'
 })
 export class ProductDetailsComponent {
+  product!: Product | undefined;
 
+  constructor(
+    private route: ActivatedRoute,
+    private apiService: ApiService
+  ) { }
+
+  ngOnInit(): void {
+    // Get id from URL
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.getProductById(id);
+  }
+
+  getProductById(id: number): void {
+    this.apiService.getProductById(id).subscribe(prod => {
+      this.product = prod;
+    });
+  }
 }
