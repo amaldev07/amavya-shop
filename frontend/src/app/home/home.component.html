@@ -32,6 +32,20 @@
 
 <section id="products" class="product-section">
   <div class="product-container">
+    <div class="product-card" *ngFor="let product of products" [attr.data-category]="product.category"
+      [routerLink]="['/product', product.id]">
+      <img [src]="product.image" [alt]="product.name" />
+      <h4>{{ product.name }}</h4>
+      <p class="price">₹{{ product.price }}</p>
+
+      <div class="card-actions">
+        <button class="btn add-cart">Add to Cart</button>
+        <button class="btn buy-now">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="product-container">
     <div class="product-card" data-category="Bangles" [routerLink]="['/product', 1]">
       <img src="assets/product2.jpg" alt="Bangles" />
       <h4>Graceful Gold Bangles</h4>
@@ -89,7 +103,7 @@
         <button class="btn buy-now">Buy Now</button>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
 
 <!-- <footer>
