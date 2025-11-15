@@ -1,13 +1,17 @@
 <div class="product-details" *ngIf="product">
   <!-- Left: Product Images -->
   <div class="product-gallery">
-    <img [src]="'assets/prod-images/'+ product.images[0]" alt="Main Product" class="main-image" />
+    <img [src]="selectedImage" alt="Main Product" class="main-image" />
 
     <div class="thumbnail-row">
-      <img [src]="'assets/prod-images/'+ product.images[0]" alt="Thumbnail 1" />
+      <img *ngFor="let img of product.images" [src]="'assets/prod-images/' + img" alt="Product Thumbnail"
+        (click)="selectedImage = 'assets/prod-images/' + img"
+        [class.active-thumb]="selectedImage === 'assets/prod-images/' + img" />
+
+      <!-- <img [src]="'assets/prod-images/'+ product.images[0]" alt="Thumbnail 1" />
       <img [src]="'assets/prod-images/'+ product.images[1]" alt="Thumbnail 2" />
       <img [src]="'assets/prod-images/'+ product.images[2]" alt="Thumbnail 3" />
-      <img [src]="'assets/prod-images/'+ product.images[3]" alt="Thumbnail 4" />
+      <img [src]="'assets/prod-images/'+ product.images[3]" alt="Thumbnail 4" /> -->
     </div>
   </div>
 

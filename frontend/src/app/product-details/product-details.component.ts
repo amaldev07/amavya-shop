@@ -10,6 +10,7 @@ import { ApiService } from '../services/api.service';
 })
 export class ProductDetailsComponent {
   product!: Product | undefined;
+  selectedImage: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -25,6 +26,7 @@ export class ProductDetailsComponent {
   getProductById(id: number): void {
     this.apiService.getProductById(id).subscribe(prod => {
       this.product = prod;
+      this.selectedImage = 'assets/prod-images/' + this.product?.images[0];
     });
   }
 }
