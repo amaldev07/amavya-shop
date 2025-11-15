@@ -4,8 +4,26 @@
 
   <div class="cart-items">
 
-    <!-- Single Cart Item -->
-    <div class="cart-item">
+    <div class="cart-item" *ngFor="let item of cartItems">
+
+      <img class="item-image" [src]="'assets/prod-images/' + item.thumbnail">
+
+      <div class="item-details">
+        <h3 class="item-name">{{ item.name }}</h3>
+        <p class="item-price">₹{{ item.price }}</p>
+
+        <div class="quantity-box">
+          <button class="qty-btn" (click)="decreaseQty(item)">-</button>
+          <input type="text" class="qty-input" [value]="item.quantity" readonly />
+          <button class="qty-btn" (click)="increaseQty(item)">+</button>
+        </div>
+      </div>
+
+      <button class="remove-btn" (click)="removeItem(item.id)">✕</button>
+    </div>
+
+
+    <!--  <div class="cart-item">
       <img class="item-image" src="assets/prod-images/prod-1/thumbnail.jpg" alt="Product">
 
       <div class="item-details">
@@ -20,10 +38,9 @@
       </div>
 
       <button class="remove-btn">✕</button>
-    </div>
+    </div> -->
 
-    <!-- Duplicate for demo -->
-    <div class="cart-item">
+    <!--  <div class="cart-item">
       <img class="item-image" src="assets/prod-images/prod-2/thumbnail.jpg" alt="Product">
 
       <div class="item-details">
@@ -38,7 +55,7 @@
       </div>
 
       <button class="remove-btn">✕</button>
-    </div>
+    </div> -->
 
   </div>
 
@@ -46,7 +63,7 @@
   <div class="cart-summary">
     <div class="summary-row">
       <span>Subtotal</span>
-      <span>₹2,498</span>
+      <span>₹{{ total }}</span>
     </div>
 
     <div class="summary-row">
@@ -56,7 +73,7 @@
 
     <div class="summary-row total">
       <span>Total</span>
-      <span>₹2,498</span>
+      <span>₹{{ total }}</span>
     </div>
 
     <button class="checkout-btn">Proceed to Checkout</button>
