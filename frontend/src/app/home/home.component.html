@@ -32,9 +32,9 @@
 
 <section id="products" class="product-section">
   <div class="product-container">
-    <div class="product-card" *ngFor="let product of products" [attr.data-category]="product.category"
+    <div class="product-card" *ngFor="let product of products; let i=index" [attr.data-category]="product.category"
       [routerLink]="['/product', product.id]">
-      <img [src]="product.thumbnail" [alt]="product.name" />
+      <img [src]="'assets/prod-images/'+ product.thumbnail" [alt]="product.name" />
       <h4>{{ product.name }}</h4>
       <p class="price">₹{{ product.price }}</p>
 

@@ -1,80 +1,80 @@
 [
-    {
-        "id": 1,
-        "name": "Graceful Gold Bangles",
-        "price": 1599,
-        "thumbnail": "assets/product2.jpg",
-        "images": [
-            "assets/product1.jpg",
-            "assets/product2.jpg",
-            "assets/product3.jpg",
-            "assets/product4.jpg"
-        ],
-        "category": "Bangles"
-    },
-    {
-        "id": 2,
-        "name": "Royal Pearl Earrings",
-        "price": 899,
-        "thumbnail": "assets/product2.jpg",
-        "images": [
-            "assets/product2.jpg",
-            "assets/product2.jpg",
-            "assets/product2.jpg",
-            "assets/product2.jpg"
-        ],
-        "category": "Earrings"
-    },
-    {
-        "id": 3,
-        "name": "Radiant Lotus Bracelet",
-        "price": 1499,
-        "thumbnail": "assets/product2.jpg",
-        "images": [
-            "assets/product2.jpg",
-            "assets/product2.jpg",
-            "assets/product2.jpg",
-            "assets/product2.jpg"
-        ],
-        "category": "Bracelets"
-    },
-    {
-        "id": 4,
-        "name": "Gold Bloom Necklace",
-        "price": 1299,
-        "thumbnail": "assets/product2.jpg",
-        "images": [
-            "assets/product2.jpg",
-            "assets/product2.jpg",
-            "assets/product2.jpg",
-            "assets/product2.jpg"
-        ],
-        "category": "Necklaces"
-    },
-    {
-        "id": 5,
-        "name": "Graceful Gold Bangles",
-        "price": 1599,
-        "thumbnail": "assets/product2.jpg",
-        "images": [
-            "assets/product2.jpg",
-            "assets/product2.jpg",
-            "assets/product2.jpg",
-            "assets/product2.jpg"
-        ],
-        "category": "Bangles"
-    },
-    {
-        "id": 6,
-        "name": "Graceful Gold Bangles",
-        "price": 1599,
-        "thumbnail": "assets/product2.jpg",
-        "images": [
-            "assets/product2.jpg",
-            "assets/product2.jpg",
-            "assets/product2.jpg",
-            "assets/product2.jpg"
-        ],
-        "category": "Bangles"
-    }
+  {
+    "id": 1,
+    "name": "Graceful Gold Bangles",
+    "price": 1599,
+    "thumbnail": "prod-1/thumbnail.jpg",
+    "images": [
+      "prod-1/images/img1.jpg",
+      "prod-1/images/img2.jpg",
+      "prod-1/images/img3.jpg",
+      "prod-1/images/img4.jpg"
+    ],
+    "category": "Bangles"
+  },
+  {
+    "id": 2,
+    "name": "Royal Pearl Earrings",
+    "price": 899,
+    "thumbnail": "prod-2/thumbnail.jpg",
+    "images": [
+      "prod-2/images/img1.jpg",
+      "prod-2/images/img2.jpg",
+      "prod-2/images/img3.jpg",
+      "prod-2/images/img4.jpg"
+    ],
+    "category": "Earrings"
+  },
+  {
+    "id": 3,
+    "name": "Radiant Lotus Bracelet",
+    "price": 1499,
+    "thumbnail": "prod-3/thumbnail.jpg",
+    "images": [
+      "prod-3/images/img1.jpg",
+      "prod-3/images/img2.jpg",
+      "prod-3/images/img3.jpg",
+      "prod-3/images/img4.jpg"
+    ],
+    "category": "Bracelets"
+  },
+  {
+    "id": 4,
+    "name": "Gold Bloom Necklace",
+    "price": 1299,
+    "thumbnail": "prod-4/thumbnail.jpg",
+    "images": [
+      "prod-4/images/img1.jpg",
+      "prod-4/images/img2.jpg",
+      "prod-4/images/img3.jpg",
+      "prod-4/images/img4.jpg"
+    ],
+    "category": "Necklaces"
+  },
+  {
+    "id": 5,
+    "name": "Graceful Gold Bangles",
+    "price": 1599,
+    "thumbnail": "prod-5/thumbnail.jpg",
+    "images": [
+      "prod-5/images/img1.jpg",
+      "prod-5/images/img2.jpg",
+      "prod-5/images/img3.jpg",
+      "prod-5/images/img4.jpg"
+    ],
+    "category": "Bangles"
+  },
+  {
+    "id": 6,
+    "name": "Graceful Gold Bangles",
+    "price": 1599,
+    "thumbnail": "prod-6/thumbnail.jpg",
+    "images": [
+      "prod-6/images/img1.jpg",
+      "prod-6/images/img2.jpg",
+      "prod-6/images/img3.jpg",
+      "prod-6/images/img4.jpg"
+    ],
+    "category": "Bangles"
+  }
 ]
