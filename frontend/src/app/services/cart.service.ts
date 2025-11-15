@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product.model';
+import { BehaviorSubject } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +10,13 @@ export class CartService {
 
   private cartKey = 'amavya_cart';
   cartItems: any[] = [];
+  cartCount = new BehaviorSubject<number>(0);
+
 
   constructor() {
     this.loadCart();
+    this.cartCount.next(this.cartItems.length);
+
   }
 
   // Load cart from localStorage
@@ -20,9 +26,14 @@ export class CartService {
   }
 
   // Save cart to localStorage
+  /* private saveCart() {
+    localStorage.setItem(this.cartKey, JSON.stringify(this.cartItems));
+  } */
   private saveCart() {
     localStorage.setItem(this.cartKey, JSON.stringify(this.cartItems));
+    this.cartCount.next(this.cartItems.length);
   }
+
 
   // Add to cart
   addToCart(product: Product, quantity: number = 1) {
