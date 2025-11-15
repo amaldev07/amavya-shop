@@ -23,7 +23,6 @@ export class HomeComponent {
   addToCart(product: Product) {
     if (product) {
       this.cartService.addToCart(product, 1);
-      alert("Added to cart!");
     }
   }
 }
