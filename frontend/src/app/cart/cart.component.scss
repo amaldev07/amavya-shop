@@ -1,0 +1,148 @@
+.cart-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cart-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Cart Item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.item-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 14px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.item-price {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Quantity Control */
+.quantity-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  background: #eee;
+  border: none;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.qty-input {
+  width: 40px;
+  text-align: center;
+  font-size: 16px;
+  padding: 4px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Remove Button */
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #999;
+  padding: 4px;
+}
+
+.remove-btn:hover {
+  color: #e74c3c;
+}
+
+/* Cart Summary */
+.cart-summary {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.summary-row.total {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px;
+  background: #6a0dad; /* royal purple */
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background: #5b0ca8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: row;
+  }
+
+  .item-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .item-name {
+    font-size: 16px;
+  }
+}
