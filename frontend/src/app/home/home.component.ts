@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { Product } from '../models/product.model';
 import { CartService } from '../services/cart.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,8 @@ export class HomeComponent {
   products: Product[] = [];
 
   constructor(private apiService: ApiService,
-    private cartService: CartService) { }
+    private cartService: CartService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.apiService.getProducts().subscribe(data => {
@@ -31,6 +34,7 @@ export class HomeComponent {
     event.stopPropagation(); // VERY IMPORTANT — this stops routerLink navigation
     if (product) {
       this.cartService.addToCart(product, 1);
+      this.router.navigate(['/cart']);
     }
   }
 
