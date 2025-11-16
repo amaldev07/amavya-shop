@@ -12,45 +12,6 @@ body {
   color: #333;
 }
 
-/* Header */
-/* .header {
-  background-color: #3b1d3f;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  flex-wrap: wrap;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-}
-
-.logo img {
-  width: 45px;
-  height: 45px;
-}
-
-.logo h1 {
-  font-size: 1.4rem;
-  letter-spacing: 2px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.menu a:hover {
-  color: #f4c542;
-} */
-
 /* Hero Section */
 .hero {
   text-align: center;
@@ -167,27 +128,8 @@ body {
   font-weight: 600;
 }
 
-/* Footer */
-/* footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #3b1d3f;
-  color: white;
-  font-size: 0.9rem;
-} */
-
 /* ✅ Responsive (Mobile First) */
 @media (max-width: 768px) {
- /*  .menu {
-    width: 100%;
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-
-  .menu a {
-    margin: 0 0.8rem;
-  } */
-
   .hero h2 {
     font-size: 1.7rem;
   }
@@ -201,10 +143,6 @@ body {
   .product-card {
     width: 100%;
   }
-
- /*  .logo h1 {
-    font-size: 1.1rem;
-  } */
 
   .hero {
     padding: 3rem 1rem;
