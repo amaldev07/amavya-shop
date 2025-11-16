@@ -11,6 +11,7 @@ export class CartService {
   private cartKey = 'amavya_cart';
   cartItems: any[] = [];
   cartCount = new BehaviorSubject<number>(0);
+  shippingAmount = 45;
 
 
   constructor() {
@@ -73,12 +74,17 @@ export class CartService {
 
   // Get total price
   getTotal() {
-    return this.cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const shippingAmount = this.cartItems.length > 0 ? this.shippingAmount : 0;
+    return this.cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0) + shippingAmount;
   }
 
   // Clear all items
   clearCart() {
     this.cartItems = [];
     this.saveCart();
+  }
+
+  getShippingAmount() {
+    this.shippingAmount;
   }
 }

@@ -10,6 +10,7 @@ export class CartComponent implements OnInit {
 
   cartItems: any[] = [];
   total = 0;
+  shippingAmount = this.cartService.shippingAmount;
 
   constructor(private cartService: CartService) { }
 
