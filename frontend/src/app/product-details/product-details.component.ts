@@ -12,6 +12,7 @@ import { CartService } from '../services/cart.service';
 export class ProductDetailsComponent {
   product!: Product | undefined;
   selectedImage: string = '';
+  quantity: number = 1;
 
   constructor(
     private route: ActivatedRoute,
@@ -34,7 +35,7 @@ export class ProductDetailsComponent {
 
   addToCart() {
     if (this.product) {
-      this.cartService.addToCart(this.product, 1);
+      this.cartService.addToCart(this.product, this.quantity);
     }
   }
 
