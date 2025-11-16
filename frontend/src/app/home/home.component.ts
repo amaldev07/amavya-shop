@@ -12,7 +12,8 @@ export class HomeComponent {
   currentYear = new Date().getFullYear();
   products: Product[] = [];
 
-  constructor(private apiService: ApiService, private cartService: CartService) { }
+  constructor(private apiService: ApiService,
+    private cartService: CartService) { }
 
   ngOnInit(): void {
     this.apiService.getProducts().subscribe(data => {
@@ -20,9 +21,17 @@ export class HomeComponent {
     });
   }
 
-  addToCart(product: Product) {
+  /* addToCart(product: Product) {
+    if (product) {
+      this.cartService.addToCart(product, 1);
+    }
+  } */
+
+  addToCart(product: Product, event: Event) {
+    event.stopPropagation(); // VERY IMPORTANT — this stops routerLink navigation
     if (product) {
       this.cartService.addToCart(product, 1);
     }
   }
+
 }
