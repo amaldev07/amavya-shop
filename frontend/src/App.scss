@@ -45,6 +45,7 @@ body {
 .logo h1 {
   font-size: 1.4rem;
   letter-spacing: 2px;
+  margin: 0;
 }
 
 .menu {
@@ -73,6 +74,7 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
+  gap: 4px;
 }
 
 .cart-badge {

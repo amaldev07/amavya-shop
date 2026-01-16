@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 .cart-container {
   max-width: 900px;
   margin: 0 auto;
@@ -23,7 +25,7 @@
   padding: 12px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   position: relative;
 }
 
@@ -67,6 +69,12 @@
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.qty-btn:hover {
+  background: #d4af37;
+  color: white;
 }
 
 .qty-input {
@@ -86,6 +94,7 @@
   cursor: pointer;
   color: #999;
   padding: 4px;
+  transition: color 0.3s ease;
 }
 
 .remove-btn:hover {
@@ -98,7 +107,7 @@
   padding: 20px;
   background: #fafafa;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .summary-row {
@@ -125,10 +134,12 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .checkout-btn:hover {
   background: #5b0ca8;
+  transform: translateY(-2px);
 }
 
 /* Mobile Responsive */
@@ -140,9 +151,14 @@
   .item-image {
     width: 70px;
     height: 70px;
+    margin-right: 10px;
   }
 
   .item-name {
     font-size: 16px;
+  }
+
+  .cart-container {
+    padding: 10px;
   }
 }
