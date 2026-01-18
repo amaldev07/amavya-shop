@@ -9,17 +9,17 @@
 <section class="categories">
   <h3>Shop by Category</h3>
   <div class="category-list">
-    <button class="category active">All</button>
-    <button class="category">Necklaces</button>
-    <button class="category">Earrings</button>
-    <button class="category">Bracelets</button>
-    <button class="category">Bangles</button>
+    <button class="category" [class.active]="selectedCategory === 'All'" (click)="filterByCategory('All')">All</button>
+    <button class="category" [class.active]="selectedCategory === 'Necklaces'" (click)="filterByCategory('Necklaces')">Necklaces</button>
+    <button class="category" [class.active]="selectedCategory === 'Earrings'" (click)="filterByCategory('Earrings')">Earrings</button>
+    <button class="category" [class.active]="selectedCategory === 'Bracelets'" (click)="filterByCategory('Bracelets')">Bracelets</button>
+    <button class="category" [class.active]="selectedCategory === 'Bangles'" (click)="filterByCategory('Bangles')">Bangles</button>
   </div>
 </section>
 
 <section id="products" class="product-section">
   <div class="product-container">
-    <div class="product-card" *ngFor="let product of products; let i=index" [attr.data-category]="product.category"
+    <div class="product-card" *ngFor="let product of filteredProducts; let i=index" [attr.data-category]="product.category"
       [routerLink]="['/product', product.id]">
       <img [src]="'assets/prod-images/'+ product.thumbnail" [alt]="product.name" />
       <h4>{{ product.name }}</h4>

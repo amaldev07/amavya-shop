@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   currentYear = new Date().getFullYear();
   products: Product[] = [];
+  filteredProducts: Product[] = [];
+  selectedCategory: string = 'All';
 
   constructor(private apiService: ApiService,
     private cartService: CartService,
@@ -21,7 +23,17 @@ export class HomeComponent {
   ngOnInit(): void {
     this.apiService.getProducts().subscribe(data => {
       this.products = data;
+      this.filteredProducts = data;
     });
+  }
+
+  filterByCategory(category: string): void {
+    this.selectedCategory = category;
+    if (category === 'All') {
+      this.filteredProducts = this.products;
+    } else {
+      this.filteredProducts = this.products.filter(p => p.category.toLowerCase() === category.toLowerCase());
+    }
   }
 
   /* addToCart(product: Product) {
