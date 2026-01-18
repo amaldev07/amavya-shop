@@ -32,6 +32,8 @@ body {
 
 .main-image {
   width: 100%;
+  height: 450px;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
@@ -177,6 +179,10 @@ body {
 
   .btn {
     width: 100%;
+  }
+
+  .main-image {
+    height: 350px;
   }
 
   .thumbnail-row img {
