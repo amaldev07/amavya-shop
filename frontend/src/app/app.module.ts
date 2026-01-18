@@ -8,13 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { FormsModule } from '@angular/forms';
+import { OrderSuccessComponent } from './order-success/order-success.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductDetailsComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    OrderSuccessComponent
   ],
   imports: [
     BrowserModule,

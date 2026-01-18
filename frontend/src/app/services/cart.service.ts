@@ -87,4 +87,5 @@ export class CartService {
   getShippingAmount() {
     this.shippingAmount;
   }
+
 }

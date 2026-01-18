@@ -1,0 +1,10 @@
+<div class="success-card">
+  <h2>✅ Payment Successful!</h2>
+  <p>Your order has been placed.</p>
+
+  <p *ngIf="paymentId">
+    Payment ID: <b>{{ paymentId }}</b>
+  </p>
+
+  <a routerLink="/">Continue shopping</a>
+</div>

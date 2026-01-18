@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CartService } from '../cart.service';
+import { Router } from '@angular/router';
 
 declare var Razorpay: any;
 
@@ -12,15 +14,15 @@ export class PaymentService {
     https://us-central1-amavya-shop.cloudfunctions.net/hello 
    */
 
-  // private baseUrl = 'https://us-central1-amavya-shop.cloudfunctions.net/';
-  private baseUrl = 'http://127.0.0.1:5001/amavya-shop/us-central1/';
+  private baseUrl = 'https://us-central1-amavya-shop.cloudfunctions.net/';
+  // private baseUrl = 'http://127.0.0.1:5001/amavya-shop/us-central1/';
   private createOrderUrl = `${this.baseUrl}createOrder`;
   private verifyUrl = `${this.baseUrl}verifyPayment`;
 
   // from Razorpay dashboard (public key is safe in frontend)
   private razorpayKeyId = 'rzp_test_S5FYx0Dbk4ot1T';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private cartService: CartService, private router: Router) { }
 
   pay(amountInRupees: number, customer?: { name?: string; email?: string; contact?: string }) {
     const amount = amountInRupees * 100; // paise
@@ -42,8 +44,12 @@ export class PaymentService {
           // Verify on backend
           this.http.post<any>(this.verifyUrl, response).subscribe(v => {
             if (v.success) {
-              alert('✅ Payment successful!');
+              // alert('✅ Payment successful!'); I commented
               // TODO: clear cart + navigate to success page
+              this.cartService.clearCart();   // clear local cart
+              this.router.navigate(['/order-success'], {
+                state: { paymentId: response.razorpay_payment_id }
+              });
             } else {
               alert('⚠️ Payment verification failed.');
             }
