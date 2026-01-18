@@ -1,4 +1,7 @@
 # amavya-shop
 https://amavya.shop/
 
-Divya workign
+To run
+Frontend
+1. npm install(first time only after clone)
+2. ng s 
