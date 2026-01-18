@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
+import { PaymentService } from '../services/payment/payment.service';
 
 @Component({
   selector: 'app-cart',
@@ -12,7 +13,7 @@ export class CartComponent implements OnInit {
   total = 0;
   shippingAmount = this.cartService.shippingAmount;
 
-  constructor(private cartService: CartService) { }
+  constructor(private payment: PaymentService, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.loadCart();
@@ -41,4 +42,15 @@ export class CartComponent implements OnInit {
     this.cartService.removeItem(id);
     this.loadCart();
   }
+
+  payNow() {
+    const total = this.cartService.getTotal();
+    let userDetails = {
+      name: 'Kannan',
+      email: 'amaldev.psn@gmail.com', // fetch from user profile if available 
+      contact: '7594072480'
+    }
+    this.payment.pay(total, userDetails);
+  }
+
 }
